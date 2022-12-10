@@ -26,7 +26,6 @@ const TablePage = () => {
     { id: "gender" },
     { id: "ip_address" },
     { id: "airport code" },
-    // { id: "time" },
     { id: "mobile" },
     { id: "area" },
     // "status",
@@ -73,7 +72,6 @@ const TablePage = () => {
       return a[1] - b[1];
     });
     setdata(stabilizedThis.map((el) => el[0]));
-    // return stabilizedThis.map((el) => el[0]);
   }
   const handleRowClick = (id) => {
     setbgcolor(id);
@@ -119,14 +117,14 @@ const TablePage = () => {
                         handleRequestSort("asc", heading.id);
                       }}
                     >
-                      Sort by Asc
+                      Sort by ASC
                     </MenuItem>
                     <MenuItem
                       onClick={() => {
                         handleRequestSort("desc", heading.id);
                       }}
                     >
-                      Sort by Desc
+                      Sort by DESC
                     </MenuItem>
                   </Menu>
                 </TableCell>
@@ -140,7 +138,7 @@ const TablePage = () => {
             <TableRow
               onClick={() => handleRowClick(row.id)}
               key={row.id}
-              style={{ background: bgcolor === row.id ? "#e3f2fd" : "#fff" }}
+              style={{ background: bgcolor === row.id ? "#E9EFF6" : "#fff" }}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
@@ -152,7 +150,6 @@ const TablePage = () => {
               <TableCell>{row.gender}</TableCell>
               <TableCell>{row.ip_address}</TableCell>
               <TableCell>{row["airport code"]}</TableCell>
-              {/* <TableCell>{row.time}</TableCell> */}
               <TableCell>{row.mobile}</TableCell>
               <TableCell>{row.area}</TableCell>
               <TableCell
